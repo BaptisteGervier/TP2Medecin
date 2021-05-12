@@ -8,6 +8,7 @@ public class Adresse {
     private int cp;
     private String ville;
 
+
     public Adresse(String mentionsCompl, int numero, String complNumero, String rue, int cp, String ville) {
         this.mentionsCompl = mentionsCompl;
         this.numero = numero;
@@ -15,6 +16,7 @@ public class Adresse {
         this.rue = rue;
         this.cp = cp;
         this.ville = ville;
+
     }
 
     public Adresse(int numero, String complNumero, String rue, int cp, String ville) {
@@ -30,5 +32,6 @@ public class Adresse {
             System.out.printf(this.mentionsCompl);
         }
         System.out.printf("%d %s %s %n" + "%05d %s %n", this.numero, this.complNumero, this.rue, this.cp, this.ville.toUpperCase());
+
     }
 }

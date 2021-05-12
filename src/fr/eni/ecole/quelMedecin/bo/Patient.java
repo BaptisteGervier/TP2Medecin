@@ -14,8 +14,9 @@ public class Patient {
     private long numSecu;
     private LocalDate dateDeNaissance;
     private String commentaires;
+    private Adresse adressePatient;
 
-    public Patient(String nom, String prenom, String numeroDeTelephone, char sexe, long numSecu, LocalDate dateDeNaissance, String commentaires) {
+    public Patient(String nom, String prenom, String numeroDeTelephone, char sexe, long numSecu, LocalDate dateDeNaissance, String commentaires, Adresse adressePatient) {
         this.nom = nom;
         this.prenom = prenom;
         this.numeroDeTelephone = numeroDeTelephone;
@@ -23,6 +24,7 @@ public class Patient {
         this.numSecu = numSecu;
         this.dateDeNaissance = dateDeNaissance;
         this.commentaires = commentaires;
+        this.adressePatient = adressePatient;
     }
 
     public void afficher(){
@@ -34,6 +36,7 @@ public class Patient {
                 this.numSecu,
                 this.dateDeNaissance.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG)),
                 this.commentaires == null ? "[Aucun comm]" : this.commentaires);
+                this.adressePatient.afficher();
         /*if (this.commentaires == null){
            "[Aucun commentaire]";
         } else {

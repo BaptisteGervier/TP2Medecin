@@ -1,5 +1,7 @@
 package fr.eni.ecole.quelMedecin.bo;
 
+import java.time.LocalTime;
+
 /**
  * classe qui represente un medecin generaliste
  * @date 12/05/2021
@@ -11,18 +13,25 @@ public class MedecinGeneraliste {
     private String nom;
     private String prenom;
     private String numeroDeTelephone;
+    private Adresse adresseMedecin;
+    private Creneau[] creneaux = new Creneau[15];
     public static int tarif = 25;
 
-    public MedecinGeneraliste(String nom, String prenom, String numeroDeTelephone) {
+
+    public MedecinGeneraliste(String nom, String prenom, String numeroDeTelephone, Adresse adresseMedecin, Creneau[] creneaux) {
         this.nom = nom;
         this.prenom = prenom;
         this.numeroDeTelephone = numeroDeTelephone;
+        this.adresseMedecin = adresseMedecin;
+        this.creneaux = creneaux;
+    }
+
+    public MedecinGeneraliste(String malalaniche, String mélanie, String numeroDeTelephone, Adresse sh) {
     }
 
     public static int getTarif() {
         return tarif;
     }
-
 
     public static void setTarif(int tarif) {
         MedecinGeneraliste.tarif = tarif;
@@ -45,12 +54,26 @@ public class MedecinGeneraliste {
      * NOM Prénom
      * Telephone : XXXXX
      * Tarif : XXX€
-     * test
      * */
     public void afficher(){
         System.out.printf("%s %s%nTelephone : %s%nTarif : %d€%n",
             this.nom.toUpperCase(), this.prenom, this.numeroDeTelephone, MedecinGeneraliste.tarif);
+            this.adresseMedecin.afficher();
+        for (int i = 0; i < this.creneaux.length; i++) {
+            if (this.creneaux[i] != null){
+                this.creneaux[i].afficher();
+            }
 
+        }
     }
 
+        public void ajouterCreneau(Creneau creneauAajouter){
+            //for (int i = 0; i < this.creneaux.length; i++) {//
+            for (Creneau chaqueCase : this.creneaux){
+                if (chaqueCase == null){
+                    chaqueCase = creneauAajouter;
+                    break;
+                }
+            }
+        }
 }
