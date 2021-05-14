@@ -18,16 +18,14 @@ public class MedecinGeneraliste {
     public static int tarif = 25;
 
 
-    public MedecinGeneraliste(String nom, String prenom, String numeroDeTelephone, Adresse adresseMedecin, Creneau[] creneaux) {
+    public MedecinGeneraliste(String nom, String prenom, String numeroDeTelephone, Adresse adresseMedecin) {
         this.nom = nom;
         this.prenom = prenom;
         this.numeroDeTelephone = numeroDeTelephone;
         this.adresseMedecin = adresseMedecin;
-        this.creneaux = creneaux;
     }
 
-    public MedecinGeneraliste(String malalaniche, String mélanie, String numeroDeTelephone, Adresse sh) {
-    }
+
 
     public static int getTarif() {
         return tarif;
