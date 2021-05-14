@@ -1,6 +1,8 @@
 package fr.eni.ecole.quelMedecin.bo;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 
 public class RendezVous {
 
@@ -14,12 +16,12 @@ public class RendezVous {
         this.date = date;
     }
 
-
     public void afficher(){
-            System.out.printf("%s %s %s%n", this.creneau, this.patient, this.date);
+            System.out.printf("Rendez-vous du %s",
+                    this.date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG)));
+            this.creneau.afficher();
+            System.out.printf("avec le Dr %s%n", this.creneau.getMedecin().getNom());
+            this.patient.afficher();
     }
-
-
-
 
 }
