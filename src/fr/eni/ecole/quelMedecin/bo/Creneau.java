@@ -1,7 +1,10 @@
 package fr.eni.ecole.quelMedecin.bo;
 
+import lombok.Data;
+
 import java.time.LocalTime;
 
+@Data
 public class Creneau {
     private MedecinGeneraliste medecin;
     private LocalTime heureDebut;
