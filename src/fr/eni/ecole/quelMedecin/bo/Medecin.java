@@ -4,9 +4,9 @@ public class Medecin extends Personne {
     public static final int MAX_CRENEAUX = 15;
     protected Creneau[] creneaux = new Creneau[MAX_CRENEAUX];
 
-    public Medecin(String nom, String prenom, String numeroDeTelephone, Adresse adresse, Creneau[] creneaux) {
+    public Medecin(String nom, String prenom, String numeroDeTelephone, Adresse adresse) {
         super(nom, prenom, numeroDeTelephone, adresse);
-        this.creneaux = creneaux;
+
     }
 
     public String getNumeroDeTelephone(){

@@ -1,6 +1,6 @@
 package fr.eni.ecole.quelMedecin.bo;
 
-public class Personne extends Object{
+public class Personne{
     protected String nom;
     protected String prenom;
     protected String numeroDeTelephone;

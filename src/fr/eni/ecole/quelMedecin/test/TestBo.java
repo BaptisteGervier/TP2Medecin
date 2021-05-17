@@ -6,13 +6,13 @@ import java.time.LocalTime;
 import fr.eni.ecole.quelMedecin.bo.Adresse;
 import fr.eni.ecole.quelMedecin.bo.Creneau;
 import fr.eni.ecole.quelMedecin.bo.MedecinGeneraliste;
-import fr.eni.ecole.quelMedecin.bo.Medecin;
+import fr.eni.ecole.quelMedecin.bo.MedecinSpecialiste;
 import fr.eni.ecole.quelMedecin.bo.Patient;
 import fr.eni.ecole.quelMedecin.bo.RendezVous;
 
 public class TestBo {
 
-	private static Adresse sh = new Adresse("ZAC du Moulin Neuf", 2, "B", "rue Benjamin Franklin", 44800,
+	private static Adresse sh = new Adresse("ZAC du Moulin Neuf", 2,"B", "rue Benjamin Franklin", 44800,
 			"Saint Herblain");
 	private static MedecinGeneraliste melanie = new MedecinGeneraliste("Malalaniche", "Mélanie", "02.28.03.17.28", sh);
 	private static Adresse nio = new Adresse(19, null, "avenue Léo Lagrange", 79000, "Niort");
@@ -21,7 +21,7 @@ public class TestBo {
 
 	public static void main(String[] args) {
 		VerifMedecinRendezVous();
-		//VerifSpecialistes();
+		VerifSpecialistes();
 	}
 
 	private static void VerifMedecinRendezVous() {
@@ -49,7 +49,7 @@ public class TestBo {
 	}
 
 	private static void VerifSpecialistes() {
-		Medecin celine = new Medecin("OCENSEMAIME", "Céline", "0748159263", sh, "ORL", 52);
+		MedecinSpecialiste celine = new MedecinSpecialiste("OCENSEMAIME", "Céline", "0748159263", sh, "ORL", 52);
 		new Creneau(LocalTime.of(14, 0), 20, celine);
 		new Creneau(LocalTime.of(14, 20), 20, celine);
 		new Creneau(LocalTime.of(14, 40), 20, celine);

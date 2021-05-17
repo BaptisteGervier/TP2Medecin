@@ -10,8 +10,8 @@ public class MedecinGeneraliste extends Medecin {
     public static int tarif = 25;
 
 
-    public MedecinGeneraliste(String nom, String prenom, String numeroDeTelephone, Adresse adresse, Creneau[] creneaux) {
-        super(nom, prenom, numeroDeTelephone, adresse, creneaux);
+    public MedecinGeneraliste(String nom, String prenom, String numeroDeTelephone, Adresse adresse) {
+        super(nom, prenom, numeroDeTelephone, adresse);
     }
 
     public static int getTarif() {

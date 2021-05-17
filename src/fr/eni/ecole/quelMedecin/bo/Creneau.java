@@ -6,11 +6,11 @@ import java.time.LocalTime;
 
 @Data
 public class Creneau {
-    private MedecinGeneraliste medecin;
+    private Medecin medecin;
     private LocalTime heureDebut;
     private int duree;
 
-    public Creneau(LocalTime heureDebut, int duree, MedecinGeneraliste medecin) {
+    public Creneau(LocalTime heureDebut, int duree, Medecin medecin) {
         this.heureDebut = heureDebut;
         this.duree = duree;
         this.medecin = medecin;
@@ -25,7 +25,7 @@ public class Creneau {
                 );
     }
 
-    public MedecinGeneraliste getMedecin() {
+    public Medecin getMedecin() {
         return medecin;
     }
 }

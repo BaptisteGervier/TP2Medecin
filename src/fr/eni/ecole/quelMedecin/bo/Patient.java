@@ -29,7 +29,7 @@ public class Patient extends Personne{
         this.commentaires = commentaires;
     }
 
-    public Patient(String nom, String prenom, String numeroDeTelephone, Adresse adresse, char sexe, long numSecu, LocalDate dateDeNaissance, String commentaires) {
+    public Patient(String nom, String prenom, String numeroDeTelephone, char sexe, long numSecu, LocalDate dateDeNaissance, String commentaires,  Adresse adresse) {
         super(nom, prenom, numeroDeTelephone, adresse);
         this.sexe = sexe;
         this.numSecu = numSecu;
